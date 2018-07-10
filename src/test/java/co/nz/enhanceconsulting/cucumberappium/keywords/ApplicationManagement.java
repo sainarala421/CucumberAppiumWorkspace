@@ -16,10 +16,13 @@ public class ApplicationManagement{
 		androidDesiredCapabilities.setCapability("appActivity", "com.tumblr.onboarding.PreOnboardingActivity");
 		androidDesiredCapabilities.setCapability("clearSystemFiles", "true");
 		androidDesiredCapabilities.setCapability("newCommandTimeout", "60");
-		System.out.print("Setting desire capabilities and launching application.");
+		System.out.print("Setting desired capabilities and launching application.");
 
 		URL androidRemoteURL = new URL(remoteUrl);
 		RemoteWebDriver remoteWebdriver = new RemoteWebDriver(androidRemoteURL, androidDesiredCapabilities);
-		return remoteWebdriver.getSessionId().toString();
+		String sessionID = remoteWebdriver.getSessionId().toString();
+		System.out.printf("Session ID %s", sessionID);
+		
+		return sessionID;
 	}
 }
