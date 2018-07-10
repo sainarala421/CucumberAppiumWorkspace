@@ -16,8 +16,8 @@ public class ApplicationManagement{
 		androidDesiredCapabilities.setCapability("appActivity", "com.tumblr.onboarding.PreOnboardingActivity");
 		androidDesiredCapabilities.setCapability("clearSystemFiles", "true");
 		androidDesiredCapabilities.setCapability("newCommandTimeout", "60");
-		System.out.print("Application Management Line 19");
-		
+		System.out.print("Setting desire capabilities and launching application.");
+
 		URL androidRemoteURL = new URL(remoteUrl);
 		RemoteWebDriver remoteWebdriver = new RemoteWebDriver(androidRemoteURL, androidDesiredCapabilities);
 		return remoteWebdriver.getSessionId().toString();
