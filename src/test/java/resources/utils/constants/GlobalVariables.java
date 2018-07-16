@@ -5,7 +5,7 @@ package resources.utils.constants;
  *
  * Global Variable Utility Class
  * Use variable class for variables that does not constantly change such a paths,
- * use properties files for variables that are subject to changes such as CSS locators
+ * use properties files for variables that are subject to changes such as Xpath locators
  *
  */
 public class GlobalVariables{
